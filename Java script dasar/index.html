@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script dasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <select name="jenis" id="jenis" onchange="changeElement(this)">
+            <option disabled hidden selected>PILIH</option>
+            <option value="A">ada</option>
+            <option value="T">tidak</option>
+        </select>
+
+        <div id="name-wraper" style="display: block;">
+            <label for="Ada">
+                <span id="elementChange">nama lengkap</span>
+                <input type="text">
+            </label>
+
+            <label for="Kategori">
+                <select name="kategori" id="kategori"onchange="changeKategori(this)">
+                    <option value="B">PEGAWAI BRI</option>
+                    <option value="P">PURWAKRTA</option>
+                </select>
+            </label>
+
+            <label for>
+                <p>Nomor id</p>
+                <input type="text">
+            </label>
+            <div id="jabatan">
+            <label for>
+                <p>jabatan</p>
+                <input type="text">
+            </label>
+        </div>
+            <button type="onClick">kirim</button>
+        </div>
+    </form>
+
+    <script>
+        function changeElement(e) {
+            let elementChange = document.getElementById("elementChange");
+            let namewraper = document.getElementById("name-wraper");
+
+            if (e.value == "A") {
+                namewraper.style.display = "block";  
+            } else {
+                namewraper.style.display = "none";  
+            }   
+            }
+
+            function changeKategori(e) {
+                let kategoriChange = document.getElementById("kategori");
+                let kategoriJabatan = document.getElementById("jabatan");
+
+                if (e.value == "B") {
+                    kategoriJabatan.style.display = "block";
+                } else {
+                    kategoriJabatan.style.display = "none";
+                }
+            }
+    </script>
+</body>
+</html>

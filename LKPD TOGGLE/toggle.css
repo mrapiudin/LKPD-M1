@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.pembungkus {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.button {
+  background: rgb(255, 255, 213);
+  width: 210px;
+  height: 80px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+  margin-top: 20px;
+}
+
+.button::before {
+  position: absolute;
+  content: '';
+  background-color: rgb(87, 87, 0);
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+  margin: 5px;
+  transition: 0.5s;
+}
+
+input:checked + .button {
+  background: rgb(255, 255, 67);
+}
+
+input:checked + .button::before {
+  transform: translateX(130px);
+}
+
+#background {
+  background-color: pink;
+  transition: 0.5s ease;
+
+}
+
+input {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+

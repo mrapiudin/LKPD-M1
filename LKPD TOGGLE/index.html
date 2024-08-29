@@ -1,0 +1,25 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="toggle.css">
+  </head>
+  <body>
+    <div id="background">
+      <div class="container">
+        <div class="pembungkus">
+        <input type="checkbox" id="check">
+        <label for="check" class="button"></label>
+    </div>
+    <script>
+      let tonggleButton = document.getElementById('check');
+      let background = document.getElementById('background');
+
+        tonggleButton.addEventListener('click',() => {
+        background.style.backgroundColor = background.style.backgroundColor === 'lightblue' ? 'pink' : 'lightblue';
+      });
+    </script>
+  </body>
+  </html>

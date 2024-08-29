@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah gambar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <img src="img1 (1).jpeg" id="img">
+        <form>
+            <label>Ubah</label>
+                <select id="image">
+                    <option value="img1 (1).jpeg">gambar 1</option>
+                    <option value="img1 (2).jpeg">gambar 2</option>
+                    <option value="img1 (3).jpeg">gambar 3</option>
+                    <option value="img1 (3).jpeg">gambar 3</option>
+                </select>
+
+                <select id="bentuk">
+                    <option selected hidden disabled>plih bntuk</option>
+                    <option value="circle">Lingkaran</option>
+                    <option value="square">Kotak</option>
+                    <option value="triangle">Segitiga</option>
+                </select>
+
+                <select id="border-color">
+                    <option selected hidden disabled>pilih warna bor</option>
+                    <option value="red">Merah</option>
+                    <option value="yellow">Kuning</option>
+                    <option value="green">Hijau</option>
+                  </select>
+
+                <button type="button" onclick="myFunction(this)">kirim </button>       
+        </form>
+        
+      </div>
+      <script>
+
+        function myFunction(e) {
+            let image = document.getElementById('image').value;
+            let img = document.getElementById('img');
+            if (image != '') {
+            img.src = image
+            }
+
+            const border = document.getElementById('border-color').value;
+            img.style.border = `5px solid ${border}`
+
+            const bentuk = document.getElementById('bentuk').value;
+            if (bentuk === 'circle') {
+                img.style.borderRadius = '50%';
+                img.style.clipPath ='none';
+            } else if (bentuk === 'square') {
+                img.style.borderRadius = '0%';
+                img.style.clipPath ='none';
+            } else if (bentuk === 'triangle'){
+                img.style.borderRadius = "0%";
+                img.style.clipPath = "polygon(50% 0, 100% 100%, 0 100%)";
+            }
+            else {
+                console.log('invalid')
+            }
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Lilita+One&family=Roboto&family=Rubik&family=Signika:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Poppins',sans-serif;
+    padding-left: 10px;
+    background-color: rgb(225, 217, 195);
+}   
+
+.logo {
+    font-size: 1.9rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 1.5rem;  
+    color:  rgb(0, 141, 172);
+    text-decoration: none;
+    font-weight: 100;
+    margin-right: 45px;
+    margin-left: 30px;
+    transition: 1s;
+    border-bottom: 2px solid transparent;
+    margin-left: 30px;
+} 
+
+.navbar a:hover {
+    color: rgba(0, 68, 177, 0.768);
+    border-bottom: 2px solid ;  
+}
+
+.container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home i {
+    font-size: 1.3rem;
+    color: red;
+}
+
+.home h1 {
+    padding-top: 160px;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 145);
+}
+
+.box1 {
+    border: 4px rgb(24, 95, 157) solid;
+    width: 300px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 1.8rem;
+}
+
+.box1 img {
+    width: 230px;
+    height: 230px;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 1.4rem;
+}
+
+.pembungkus {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

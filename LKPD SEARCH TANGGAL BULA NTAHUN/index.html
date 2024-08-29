@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Input</title>
+  <style>
+    #result {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Input</h1>
+  <form>
+    <input type="date" id="search-input">
+    <button type="submit">Search</button>
+  </form>
+  <h1 id="invalid">tidak ada data</h1>
+  <div id="result"></div>
+
+  <script>
+    const searchData = document.getElementById('search-input');
+    const resultDiv = document.getElementById('result');
+    const invalid = document.getElementById('invalid');
+  
+    document.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const userInput = searchData.value;
+      if (userInput) {
+        const date = new Date(userInput);
+        const months = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December'
+        ];
+        const monthName = months[date.getMonth()];
+        const day = date.getDate();
+        const year = date.getFullYear();
+        const formattedDate = ` ${day} ${monthName} ${year}`;
+        resultDiv.innerText = formattedDate;
+        invalid.style.display = 'none'; 
+      } else {
+        resultDiv.innerText = '';
+        invalid.style.display = 'block'; 
+      }
+    });
+  </script>
+</body>
+</html>
